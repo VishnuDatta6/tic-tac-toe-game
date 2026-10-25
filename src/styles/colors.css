@@ -1,0 +1,72 @@
+/**
+ * Design tokens: all colors (and a few theme knobs) live here as CSS custom
+ * properties. Component styles reference these variables instead of raw colors.
+ *
+ * Theme: warm paper / notebook. Ink-brown text on off-white paper, muted
+ * "ink" marks, and soft, hand-drawn accents.
+ */
+
+:root {
+  /* ---------- Paper & ink base ---------- */
+  --color-paper: #f4efe2; /* base sheet color */
+  --color-paper-2: #ece4d2; /* slightly deeper paper for cards */
+  --color-ink: #3a3226; /* primary text (dark sepia ink) */
+  --color-ink-soft: #5b5140; /* secondary text */
+  --color-ink-faint: #8a7f6b; /* tertiary / subtle text */
+  --color-line: #cfc4ad; /* ruled lines / dividers */
+  --color-line-strong: #b5a888; /* stronger gridded rules */
+
+  /* Paper texture knobs (used by the background layers in base.css) */
+  --paper-grid-size: 28px;
+  --paper-vignette: rgba(90, 70, 40, 0.14);
+
+  /* ---------- Brand / accents ---------- */
+  --color-primary: #7a6a4f; /* muted sepia accent (buttons) */
+  --color-primary-hover: #665841;
+  --color-header: #5a4632; /* heading ink */
+
+  /* ---------- Board ---------- */
+  --color-square-bg: rgba(255, 252, 244, 0.65);
+  --color-square-border: #6b5c44; /* ink outline of each cell */
+  --color-square-highlight: rgba(196, 168, 96, 0.35); /* win glare */
+  --color-square-text: #4a4030;
+  --color-square-stroke: rgba(255, 252, 244, 0.9); /* chalk halo behind marks */
+
+  /* ---------- Marks (ink colors) ---------- */
+  --color-mark-x: #b23b32; /* ink red */
+  --color-mark-o: #2f5d7c; /* ink blue */
+
+  /* ---------- Status badge ---------- */
+  --color-status-bg: #e9d9a8; /* highlighter yellow */
+  --color-status-text: #5a4632;
+
+  /* ---------- Scoreboard ---------- */
+  --color-score-text: var(--color-ink);
+  --color-reset-bg: #b5533f;
+  --color-session-bg: #5f7a4e;
+
+  /* ---------- Feedback ---------- */
+  --color-error-bg: #b23b32;
+  --color-error-text: #fff8ee;
+  --color-surface: var(--color-paper-2);
+  --color-text: var(--color-ink);
+  --color-text-muted: var(--color-ink-soft);
+  --color-text-subtle: var(--color-ink-faint);
+
+  /* ---------- Modal ---------- */
+  --color-overlay: rgba(58, 50, 38, 0.45);
+  --color-modal-bg: #fbf7ee;
+
+  /* ---------- Misc ---------- */
+  --color-white: #fdfbf5;
+  --color-divider: var(--color-line);
+  --color-focus-bg: rgba(122, 106, 79, 0.15);
+  --color-shadow: rgba(58, 50, 38, 0.18);
+  --color-shadow-strong: rgba(58, 50, 38, 0.32);
+
+  /* ---------- Typography ---------- */
+  --font-hand: "Segoe Print", "Bradley Hand", "Comic Sans MS", "Chalkboard",
+    "Noteworthy", cursive;
+  --font-body: "Georgia", "Iowan Old Style", "Times New Roman", serif;
+}
+

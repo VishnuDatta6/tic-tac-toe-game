@@ -1,0 +1,57 @@
+/* Session scoreboard bar — a paper card strip. */
+
+.scoreboard {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 12px 18px;
+  margin-bottom: 24px;
+  background-color: var(--color-paper-2);
+  border: 1px solid var(--color-line-strong);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--color-shadow);
+  font-weight: bold;
+}
+
+.scoreboard-title {
+  font-family: var(--font-hand);
+  font-size: 18px;
+  color: var(--color-header);
+  border-bottom: 2px solid var(--color-header);
+}
+
+.score-item {
+  color: var(--color-score-text);
+}
+
+.scoreboard-error {
+  color: var(--color-error-bg);
+}
+
+.scoreboard-reset {
+  width: auto;
+  padding: 5px 12px;
+  background-color: var(--color-reset-bg);
+  cursor: pointer;
+  color: var(--color-white);
+}
+
+.scoreboard-session {
+  width: auto;
+  padding: 5px 12px;
+  background-color: var(--color-session-bg);
+  cursor: pointer;
+  color: var(--color-white);
+}
+
+/* Active game mode badge, pinned to the far right of the bar. */
+.scoreboard-mode {
+  margin-left: auto;
+  padding: 5px 12px;
+  border-radius: 6px;
+  background-color: var(--color-status-bg);
+  color: var(--color-status-text);
+  font-family: var(--font-hand);
+  white-space: nowrap;
+}

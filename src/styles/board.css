@@ -1,0 +1,118 @@
+/* Grid, cells, and axis labels — paper/notebook styling. */
+
+.board-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.board-row {
+  clear: both;
+  content: "";
+  display: inline-flex;
+}
+
+.square {
+  /* paper card cell with a sketched ink border */
+  background-color: var(--color-square-bg);
+  border: 3px solid var(--color-square-border);
+  border-radius: 14px;
+  color: var(--color-square-text);
+  -webkit-text-stroke: 1px var(--color-square-stroke);
+  float: left;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-hand);
+  font-size: 92px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0;
+  height: 120px;
+  text-align: center;
+  width: 120px;
+  margin-left: 2px;
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.6),
+    0 1px 2px var(--color-shadow);
+  transition:
+    background-color 0.15s ease,
+    transform 0.08s ease,
+    box-shadow 0.15s ease;
+  cursor: pointer;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: var(--color-focus-bg);
+}
+
+.square:disabled {
+  opacity: 1;
+  cursor: default;
+}
+
+/* Subtle lift on hover for still-playable (empty) cells. */
+.square:not(:disabled):hover {
+  background-color: rgba(255, 252, 244, 0.95);
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.6),
+    0 4px 8px var(--color-shadow);
+}
+
+/* Ink-colored marks. */
+.square[data-mark="X"],
+.cell-X {
+  color: var(--color-mark-x);
+}
+
+.square[data-mark="O"],
+.cell-O {
+  color: var(--color-mark-o);
+}
+
+/* Winning line: highlighter smear across the winning cells. */
+.square-highlight {
+  background-color: var(--color-square-highlight);
+  box-shadow:
+    inset 0 0 0 2px rgba(196, 168, 96, 0.6),
+    0 2px 6px var(--color-shadow);
+}
+
+/* Axis labels around the grid */
+
+.axis-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-hand);
+  font-weight: bold;
+  color: var(--color-header);
+}
+
+.row-label {
+  width: 30px;
+  height: 120px;
+  margin-right: 4px;
+  font-size: 22px;
+}
+
+.col-label {
+  width: 120px;
+  height: 30px;
+  margin-left: 2px;
+  font-size: 22px;
+}
+
+.corner-label {
+  width: 30px;
+  margin-right: 4px;
+}
+
+.column-labels {
+  margin-bottom: 4px;
+}
+

@@ -1,0 +1,58 @@
+/* Move history table — a small paper card. */
+
+.move-history {
+  width: 100%;
+  max-width: 360px;
+  margin-top: 24px;
+}
+
+.move-history-title {
+  font-family: var(--font-hand);
+  font-size: 18px;
+  color: var(--color-header);
+  margin: 0 0 8px;
+  border-bottom: 2px solid var(--color-header);
+  display: inline-block;
+}
+
+.move-history-empty {
+  color: var(--color-text-subtle);
+  font-style: italic;
+}
+
+.move-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-paper-2);
+  border: 1px solid var(--color-line-strong);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px var(--color-shadow);
+}
+
+.move-history-table th,
+.move-history-table td {
+  padding: 6px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.move-history-table th {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-hand);
+}
+
+.move-history-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* `.cell-X` / `.cell-O` ink colors are defined in board.css so board marks,
+   the move history, and the winner modal all share one source of truth. */
+.cell-X {
+  font-weight: bold;
+}
+
+.cell-O {
+  font-weight: bold;
+}
